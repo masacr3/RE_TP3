@@ -2,12 +2,13 @@ from constantes import *
 from pilas import *
 from colas import *
 import os
+import platform
 
 def limpiar_pantalla():
     """
     Borra pantalla.
     """
-    os.system(CLS if os.name == WIN else CLEAR) # cls if os.windows else clear
+    os.system(CLS if platform.system() == WIN else CLEAR)
 
 class Cinta:
     """
@@ -107,6 +108,7 @@ class Maquina:
             print("{}{}  {}{}".format(MENSAJE_COLA,self.cola,MENSAJE_PANTALLA,self.pantalla))
             print()
             print("{:.100}".format(str(self.cinta)))
+            print("^")
             input(MENSAJE_AL_USUARIO)
             return
         if self.cinta.actual() == DESENCOLAR_IMPRIMIR_ENCOLAR:
@@ -192,17 +194,17 @@ class Maquina:
 
     def _salta_hasta_la_barra_inicio(self):
         """
-        Devuelve hasta la barra opuesta \ .
+        vuelve hasta la barra opuesta \ .
         """
         repeticion = 0
         self._mostrar()
         while True:
             self._retroceder_cinta()
             elemento = self.cinta.actual()
-            if elemento == terminar:
+            if elemento == FIN:
                 repeticion +=1
                 continue
-            if elemento == empezar:
+            if elemento == INICIO:
                 if repeticion != 0:
                     repeticion -= 1
                     continue
@@ -220,10 +222,10 @@ class Maquina:
             while True:
                 self._avanzar_cinta()
                 elemento = self.cinta.actual()
-                if elemento == empezar:
+                if elemento == INICIO:
                     repeticion += 1
                     continue
-                if elemento == terminar:
+                if elemento == FIN:
                     if repeticion != 0:
                         repeticion -= 1
                         continue

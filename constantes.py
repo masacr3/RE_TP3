@@ -8,7 +8,7 @@ INICIO = "\\"
 FIN = "/"
 DEBUG = "-d"
 EXTENSION_SCEQL = "sceql"
-WIN = "win32"
+WIN = "Windows"
 CLS = "cls"
 CLEAR = "clear"
 
