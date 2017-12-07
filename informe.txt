@@ -1,0 +1,42 @@
+Primera etapa:
+        +Se cambiaron los nombres de implementación y corregieron los nombres de las clases
+
+        +inicialmente se tomó la idea de no tener un código spanishinglish. Con lo cual fue un error pasar
+        todo el código a español lo cual se llegó a una mala interpretación de la idea que queríamos llevar.
+        Apartir del error marcado se modifico el nombre de las implementaciones respetando
+        el nombre original de las primitivas(como 'eliminar' por 'pop' por mensionar alguno). Tambien se corrigio el nombre de las clases a un estilo
+        de fuente CAMEL_CASE
+
+        +Se crearon nuevas implementaciónes como insertar_primero(). Esta implementación no es una primitiva de
+        la 'Cola'. Se la creo con el fin de poder obtener el elemento anterior de la 'Cola', por q al desencolar un elementos
+        de la 'Cola' este elemento se pierde con lo cual el elemento desencolado lo guardamos en una 'Pila' con el objetivo
+        de que si en algun momento la 'Cinta' nesesita retroceder el metodo insertar_primero() pudiera recuperar el
+        el dato desencolado anteriormente..
+
+        +Tambien se creo en la ListaEnlazada 'insertar_al_principio' la cual inserta un nodo al principio de la lista. Dicha implementacion no es
+        una primitiva de la lista. Se creo para q se integrara a 'insertar_primero' la cual se detallo su funcionamiento en el parrafo anterior
+
+Segunda etapa:
+        +Se fixeo el nombre de las constates que estaban en minusculas, se las cambio por mayusculas. Ya que por convencion
+        las constantes tienen q estar en mayusculas.
+        +En el mismo modulo se agregaron nuevas constantes como por el ejemplo
+        las constantes de ERRORES y algunas constantes que nesesitaban algunas implementacion
+
+Tercer etapa:
+        +se corrigio el funcionamiento 'es_archivo_sceql' directamente retornamos el valor boleano de la operacion
+        +se fixeo el bug de la 'ListaEnlazada'
+
+Cuarta etapa:
+        +Desfragmentacion del archivo sceql.py en modulos especializados
+        Fue la idea original, ya que de este modo la estructura de nuestra aplicacion es escalable.
+        Por error tomamos la decision de comprimir todos los modulos en una sola estructura homogenea lo cual no es bueno
+        por tema de estabilidad de la aplicacion y mas dificil su mantenimiento.
+
+Quita etapa:
+        +Se corrigio el fix 'limpiar_pantalla' estubimos con martin evaluando diferentes metodologias para que el la funcion
+        corra en diferentes operativos para lo cual usamos el Modulo 'platform'. Este modulo fue la propuesta mas prospera
+        que encontramos de tantas. Unos de los metodos de platform 'system' devuelve el sistema operativo donde se esta corriendo
+        la aplicacion con esa informacion tomamos la decicion que constante deveriamos usar para borrar pantalla ya que en windows
+        el comando 'cls' borra la pantalla, mientras que en linux y en mac 'clear' es el comando que hace dicho trabajo.
+        se implemento un 'operador ternario' para poder resolver dicho inconveniente
+        +Se cambio de nombre LISTA_CARACTERES_SCEQL por TUPLA_CARACTERES_SCEQL

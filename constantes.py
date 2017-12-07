@@ -20,7 +20,7 @@ MENSAJE_PANTALLA = "Pantalla: "
 #RANGO en _Sumar_1 y _restar_1
 COTA_MAYOR = 256
 COTA_MENOR = 0
-LISTA_CARACTERES_SCEQL = ("_","-","!","=","*","\\","/")
+TUPLA_CARACTERES_SCEQL = ("_","-","!","=","*","\\","/")
 
 #Mensaje de ERRORES
 ERROR_NO_ENCUENTRA_ARCHIVO = "El archivo ingresado no existe"

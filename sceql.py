@@ -29,7 +29,7 @@ def cargar_datos():
     with open(_archivo) as archivo:
         for linea in archivo:
             for caracter in linea:
-                if caracter in LISTA_CARACTERES_SCEQL:
+                if caracter in TUPLA_CARACTERES_SCEQL:
                     cinta.cargar(caracter)
     if len(sys.argv)==3 and sys.argv[2]== DEBUG: #cambie
         maquina=Maquina(cinta,True)
