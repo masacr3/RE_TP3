@@ -15,6 +15,8 @@ Primera etapa:
 
         +Tambien se creo en la ListaEnlazada 'insertar_al_principio' la cual inserta un nodo al principio de la lista. Dicha implementacion no es
         una primitiva de la lista. Se creo para q se integrara a 'insertar_primero' la cual se detallo su funcionamiento en el parrafo anterior
+        
+        +se cambiaron los metodos a privados de la maquina. el unico metodo publico que maneja la maquina es 'procesar'
 
 Segunda etapa:
         +Se fixeo el nombre de las constates que estaban en minusculas, se las cambio por mayusculas. Ya que por convencion
